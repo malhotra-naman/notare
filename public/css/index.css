@@ -1,0 +1,11 @@
+.card {
+  width: 413px;
+  height: 180px;
+  max-width: 100%;
+  max-height: 180px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.card-text {
+  word-wrap: break-word;
+}

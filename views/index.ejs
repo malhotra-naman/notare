@@ -1,0 +1,27 @@
+<% layout('layout/boilerplate') -%>
+<link rel="stylesheet" href="/css/index.css" />
+<div class="container-fluid">
+  <h1 class="display-2 text-center">Notare - Your Notes!</h1>
+  <div class="row row-cols-3">
+    <% for(let note of notes){ %>
+    <div class="col">
+      <div class="card shadow p-3 mb-5 bg-white rounded">
+        <div class="card-body">
+          <h5 class="card-title"><%= note.title %></h5>
+          <h6 class="card-subtitle mb-2 text-muted">
+            <%= note.creationDate.toString().substring(0,25) %>
+          </h6>
+          <p class="card-text"><%= note.text %></p>
+          <a href="/notes/<%= note._id %>" class="card-link">View</a>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</div>
+
+<style>
+  .card {
+    margin: 2rem;
+  }
+</style>

@@ -1,0 +1,27 @@
+<% layout('layout/boilerplate') -%>
+<link rel="stylesheet" href="/css/show.css" />
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <div class="card shadow p-3 mb-5 bg-white rounded">
+        <div class="card-body">
+          <h5 class="card-title"><%= note.title %></h5>
+          <h6 class="card-subtitle mb-2 text-muted">
+            <%= note.creationDate.toString().substring(0,25) %>
+          </h6>
+          <p class="card-text"><%= note.text %></p>
+          <a href="/notes/<%= note._id %>/edit" class="card-link btn btn-info"
+            >Edit</a
+          >
+          <form
+            class="d-inline"
+            action="/notes/<%=note.id%>?_method=DELETE"
+            method="POST"
+          >
+            <button class="btn btn-danger">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

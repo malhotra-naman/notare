@@ -1,0 +1,13 @@
+.create-form {
+  margin-top: 1em;
+}
+
+.display-4 {
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.card {
+  background-color: #00bbf9;
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
